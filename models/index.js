@@ -1,17 +1,17 @@
-const Cheese  = require("./models");
-const Board  = require("./models");
-const User  = require("./models");
+const Cheese  = require("./cheese.models");
+const Board  = require("./board.models");
+const User  = require("./user.models");
 
 
 
 // Cheese and Board (many to many)
-Cheese.belongsToMany(Board, {through: 'Cheese_Board'})
-Board.belongsToMany(Cheese, {through: 'Cheese_Board'})
+Cheese.belongsToMany(Board, { through: 'Cheese_Board'})
+Board.belongsToMany(Cheese, { through: 'Cheese_Board'})
 
 
 // User and Cheese (one to many)
-User.hasMany(Cheese)
-Cheese.belongsTo(User)
+// User.hasMany(Cheese)
+// Cheese.belongsTo(User)
 
 
 // User to Board (one to many)
@@ -21,4 +21,4 @@ Board.belongsTo(User)
 
 
 
-module.exports = { Cheese, Book, User }
+module.exports = { Cheese, Board, User }

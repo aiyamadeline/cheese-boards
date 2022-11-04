@@ -1,12 +1,11 @@
+const { Cheese, Board, User } = require('../models')
 const db = require('./db')
-const { Cheese, Board, User } = require('./model')
-db = require('./db')
 
-// function seed () {
+ async function seed () {
 
-//     await db.sync({
-//         force: true
-//     })
+     await db.sync({        
+        force: true
+    })
 
 
     await Cheese.bulkCreate([
@@ -99,4 +98,7 @@ db = require('./db')
         }
     ])
 
-//}
+}
+
+
+seed ()

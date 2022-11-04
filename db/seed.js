@@ -101,4 +101,4 @@ const db = require('./db')
 }
 
 
-seed ()
+    seed ()

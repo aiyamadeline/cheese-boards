@@ -1,6 +1,6 @@
-const Cheese  = require("./cheese.models");
-const Board  = require("./board.models");
-const User  = require("./user.models");
+const Cheese  = require("./cheese.model");
+const Board  = require("./board.model");
+const User  = require("./user.model");
 
 
 

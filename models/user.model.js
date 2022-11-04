@@ -1,20 +1,20 @@
-const { Datatypes, Model } = require('sequelize')
+const { DataTypes, Model } = require('sequelize')
 const db = require('../db/db')
 
 class User extends Model { }
 
 User.init({
     id: { 
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     name: {
-        type: Datatypes.STRING
+        type: DataTypes.STRING
         
     },
     email: {
-        type: Datatypes.STRING
+        type: DataTypes.STRING
     }
     
 }, {
